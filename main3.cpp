@@ -8,8 +8,6 @@ int main (){
 	int a[10], b[10], c[20]; int i; int p=0;
 	getline(cin, stroka1);
 	istringstream stream1(stroka1);
-	getline(cin, stroka2);
-	istringstream stream2(stroka2);
 	for(i=0; i<10; i++){
 	    if(!(stream1>>a[i])){
 	        cout<<"An error has occurred while reading the input sequence."<<endl;
@@ -22,6 +20,8 @@ int main (){
 	    p=a[i];
 	}
 	p=0;
+	getline(cin, stroka2);
+	istringstream stream2(stroka2);
 	for(i=0; i<10; i++){
 	    if(!(stream2>>b[i])){
 	        cout<<"An error has occurred while reading the input sequence."<<endl;
