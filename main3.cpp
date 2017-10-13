@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <sstream>
 using namespace std;
@@ -32,26 +33,26 @@ int main (){
 	    }
 	    p=b[i];
 	}
-  for (int j = 0; j < 20; j++)
+	for (int i=0; i<20; i++)
 	{
-		if (j < 10) c[j] = a[j];
-		else c[j] = b[j - 10];
+		if (i < 10) c[i] = a[i];
+		else c[i] = b[i-10];
 	}
-	for (int i = 0; i < 19 ; i++) 
+	for (int i=0; i<19; i++) 
 	{
-		for (int j = 0; j < 19-i ; j++)
+		for (int j=0; j<19-i; j++)
 		{
-			if (c[j] > c[j + 1])
+			if (c[j] > c[j+1])
 			{
-				int time = c[j];
-				c[j] = c[j + 1];
-				c[j + 1] = time;
+				int t = c[j];
+				c[j] = c[j+1];
+				c[j+1] = t;
 			}
 		}
 	}
-	for (int j = 0; j < 20; j++)
+	for (int i=0; i<20; i++)
 	{
-		cout << c[j]<< " ";
+		cout << c[i]<< " ";
 	}
 	return 0;
 }
